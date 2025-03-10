@@ -9,8 +9,8 @@ function ResetFormButton(){
 
     // not using href since server side
     function resetForm(){
-        const searchForm = document.querySelector('#searchForm') as HTMLFormElement
-        if(searchForm) searchForm.reset()
+        const searchForm = document.querySelector('#searchForm')
+        if(searchForm) (searchForm as HTMLFormElement).reset()
     }
 
     return(
