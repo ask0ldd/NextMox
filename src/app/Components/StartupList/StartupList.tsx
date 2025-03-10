@@ -1,22 +1,18 @@
+import StartupAPIService from "@/app/Services/StartupAPIService"
 import StartupCard from "./StartupCard"
 
-function StartupList(){
+async function StartupList({query} : {query? : string}){
+
+    const startupService = new StartupAPIService()
+    const startups = await startupService.getAll()
+
     return(
         <section className="flex flex-col w-full">
-            <h2 className="text-[22px] pt-[30px]">Recommended Startups</h2>
-            <div className="flex flex-row flex-wrap gap-x-[15px] gap-y-[15px] w-full mt-[25px]">
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
-                <StartupCard/>
+            <h2 className="text-[22px] font-semibold pt-[20px]">Recommended Startups</h2>
+            <div className="flex flex-row flex-wrap gap-x-[15px] gap-y-[15px] w-full mt-[20px]">
+                {startups.filter(startup => startup.companyName.toLowerCase().includes((query ?? "").toLowerCase())).map((startup, i) => 
+                    <StartupCard key={"startup" + i} startup={startup}/>
+                )}
             </div>
         </section>
     )
