@@ -7,6 +7,11 @@ const jost = Jost({
     subsets: ["latin"],
 });
 
+/*const afacad = Afacad_Flux({
+    variable: "--font-afacad",
+    subsets: ["latin"],
+});*/
+
 
 export const metadata: Metadata = {
     title: "YC Directory",
