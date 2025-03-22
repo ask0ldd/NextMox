@@ -8,4 +8,11 @@ export default class StartupAPIService{
             }, 3000);
         })
     }
+
+    getById(id : number) : Promise<IStartup | null>{
+        return new Promise((resolve) => {
+            resolve(startups.filter(startup => startup.id == id)[0])
+        })
+    }
 }
+
