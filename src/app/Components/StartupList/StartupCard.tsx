@@ -18,7 +18,7 @@ function StartupCard({startup} : {startup : IStartup}){
     }
 
     return(
-        <Link className="group flex shrink grow max-w-[calc(33.33333333%-20px/3)] w-[30%] shadow-lg shadow-indigo-200 hover:shadow-[#a5b4fcaa] hover:shadow-[0_8px_16px_0px,0_4px_8px_0px] rounded-[6px] overflow-hidden" href={`/startups/${startup.id}`}>
+        <Link className="group flex shrink grow max-w-[calc(33.33333333%-20px/3)] w-[30%] shadow-lg shadow-indigo-200 hover:shadow-[#a5b4fc88] hover:shadow-[0_8px_16px_0px,0_4px_8px_0px] rounded-[6px] overflow-hidden" href={`/startups/${startup.id}`}>
             <article className="w-full bg-gradient-to-b from-[#ffffffcc] to-[#ffffffaa] border-1 border-white shrink grow p-[20px] hover:bg-white cursor-pointer">
                 <div className="flex flex-row justify-between w-full">
                     <div className="flex flex-col">
@@ -32,7 +32,7 @@ function StartupCard({startup} : {startup : IStartup}){
                 </div>
                 <ul className="flex flex-row gap-x-[8px] text-[11px] mt-[14px]">
                     {startup.categories.slice(0, 4).map((category,i) => 
-                            <li key={i} onClick={handlePillClick} className="bg-[#373737] text-white px-[12px] py-[6px] pt-[7px] rounded-[3px] hover:bg-[#291b5aaa]">
+                            <li key={i} onClick={handlePillClick} className="bg-[#373737] text-white px-[12px] py-[6px] pt-[7px] tracking-wider rounded-[3px] hover:bg-[#291b5aaa]">
                                 {category.toUpperCase()}
                             </li>
                         )}
