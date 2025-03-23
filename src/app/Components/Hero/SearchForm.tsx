@@ -23,7 +23,6 @@ function SearchForm({query} : {query? : string}){
             >
                 Search
             </button>
-            {/*query && <ResetFormButton/>*/}
         </Form>
     )
 }

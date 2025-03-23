@@ -4,8 +4,7 @@ import { use } from "react"
 
 function StartupList({query} : {query? : string}){
 
-    const startupService = new StartupAPIService()
-    const startups = use(startupService.getAll())
+    const startups = use((new StartupAPIService()).getAll())
 
     return(
         <section className="flex flex-col w-full shrink grow items-center bg-gradient-to-t from-indigo-100 to-indigo-50 pb-[40px]">
