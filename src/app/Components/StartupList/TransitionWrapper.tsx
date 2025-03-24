@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 import { useState, useTransition } from 'react';
@@ -9,23 +10,15 @@ export default function TransitionWrapper({ children }: { children: React.ReactN
   const [query, setQuery] = useState('');
 
   const handleSearch = (searchQuery: string) => {
-    setQuery(searchQuery);
+    setQuery(searchQuery)
     startTransition(() => {
-      router.push(`/startups?query=${encodeURIComponent(searchQuery)}`);
-    });
-  };
+      router.push(`/startups?query=${encodeURIComponent(searchQuery)}`)
+    })
+  }
 
   return (
-    <div>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => handleSearch(e.target.value)}
-        placeholder="Search startups..."
-        className="p-2 border rounded"
-      />
-      {isPending && <div>Loading...</div>}
+    <>
       {children}
-    </div>
+    </>
   );
 }
