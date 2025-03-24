@@ -10,15 +10,6 @@ export default function Home({searchParams} : IProps) {
     const params = use(searchParams)
     const query = params.query // query : is the input name of the form used in the url by default
 
-    /*const [isPending, startTransition] = useTransition()
-
-    const handleQueryChange = (newQuery: string) => {
-        startTransition(() => {
-          // Update the query or trigger any async operation
-          params.query = newQuery
-        })
-    }*/
-
     return (
         <div className="flex flex-col min-h-screen w-[100%] mx-auto pb-[40px] items-center">
             <Header/>
@@ -29,7 +20,6 @@ export default function Home({searchParams} : IProps) {
                 </Suspense>
             </main>
             <footer>
-
             </footer>
         </div>
     );

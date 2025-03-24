@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import StartupAPIService from "@/app/Services/StartupAPIService"
 import StartupCard from "./StartupCard"
 import { use } from "react"
@@ -5,6 +6,19 @@ import { use } from "react"
 function StartupList({query} : {query? : string}){
 
     const startups = use((new StartupAPIService()).getAll())
+
+    /*const [startups, setStartups] = useState<IStartup[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setLoading(true);
+        (new StartupAPIService()).getAll().then((data) => {
+            setStartups(data)
+            setLoading(false)
+        })
+    }, [query])*/
+
+    // if(loading) return(<SuspensedList/>)
 
     return(
         <section className="flex flex-col w-full shrink grow items-center bg-gradient-to-t from-indigo-100 to-indigo-50 pb-[40px]">
