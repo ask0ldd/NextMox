@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Rubik } from "next/font/google";
+import { Rubik } from "next/font/google"
 import SearchForm from "./SearchForm"
 
 const anton = Rubik({

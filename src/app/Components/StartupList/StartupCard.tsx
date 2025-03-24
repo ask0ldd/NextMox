@@ -26,7 +26,7 @@ function StartupCard({startup} : {startup : IStartup}){
                         src={'/landing/' + startup.pic} 
                         width={500} height={150} 
                         alt="screenshot"
-                        className="w-full h-full saturate-65 object-cover object-center opacity-90 transition-transform duration-800 ease-in-out group-hover:scale-125 group-hover:saturate-85"
+                        className="w-full h-full saturate-65 object-cover object-center opacity-90 transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:saturate-85"
                     />
                 </div>
             </article>
