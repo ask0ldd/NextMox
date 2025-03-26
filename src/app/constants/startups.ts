@@ -3,7 +3,8 @@ const startups : IStartup[] =
   {
     "id" : 1,
     "companyName": "Airbnb",
-    "icon" : "airbnb.png",
+    "smallIcon" : "airbnb.png",
+    "icon" : "airbnb.jpg",
     "pic" : "airbnb3.jpg",
     "ycBatch": "W09",
     "status": "Public",
@@ -34,6 +35,7 @@ const startups : IStartup[] =
   {
     "id" : 2,
     "companyName": "Amplitude",
+    "smallIcon" : "amplitude.png",
     "icon" : "amplitude.png",
     "pic" : "amplitude.png",
     "ycBatch": "W12",
@@ -60,6 +62,7 @@ const startups : IStartup[] =
   {
     "id" : 3,
     "companyName": "Coinbase",
+    "smallIcon" : "coinbase.png",
     "icon" : "coinbase.png",
     "pic" : "coinbase3.jpg",
     "ycBatch": "S12",
@@ -84,6 +87,7 @@ export default startups
 export interface IStartup{
     "id" : number,
     "companyName": string,
+    "smallIcon": string,
     "icon": string,
     "pic": string,
     "ycBatch": string,
