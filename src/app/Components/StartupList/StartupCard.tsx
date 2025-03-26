@@ -16,7 +16,7 @@ function StartupCard({startup} : {startup : IStartup}){
                         </div>
                         <div className="text-[16px] mt-[1px]">{startup.description.split('.')[0] + '.'}</div>
                     </div>
-                    <Image className="grow-0 shrink-0 h-[45px] opacity-85 rounded-full" src={'/logos/' + startup.icon} width={45} height={45} alt={startup.companyName + "logo"}/>
+                    <Image className="grow-0 shrink-0 h-[45px] opacity-85 rounded-full" src={'/logos/' + startup.smallIcon} width={45} height={45} alt={startup.companyName + "logo"}/>
                 </div>
                 <ul className="flex flex-row gap-x-[8px] text-[11px] mt-[14px]">
                     {startup.categories.slice(0, 4).map((category, idx) => <CardPill key={'pill' + idx} category={category}/>)}
