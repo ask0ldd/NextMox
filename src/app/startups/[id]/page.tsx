@@ -16,11 +16,11 @@ export default async function StartupPage({params} : IProps) {
             <Header/>
             <main className="flex flex-col row-start-2 items-center w-full justify-center bg-gradient-to-t from-indigo-100 to-indigo-50 pt-[20px] pb-[60px]">
                 <div className="flex flex-col w-full max-w-[1440px]">
-                    <span>{`Home > Companies > ${startup?.companyName}`}</span>
-                    <section className="flex w-full gap-x-[30px] mt-[20px]">
+                    <section className="flex w-full gap-x-[30px]">
                         <div className="flex grow shrink flex-col w-full">
-                            <div className="flex flex-row gap-x-[20px]">
-                                <Image className="grow-0 shrink-0 opacity-85 rounded-[6px] w-[100px] h-[100px]" src={'/logos/' + startup?.icon} width={128} height={128} alt={startup?.companyName + "logo"}/>
+                            <span className="text-[13px]">{`Home > Companies > ${startup?.companyName}`}</span>
+                            <div className="flex flex-row gap-x-[20px] mt-[18px]">
+                                <Image className="grow-0 shrink-0 opacity-85 rounded-[6px] w-[100px] h-[100px] shadow-lg shadow-indigo-200" src={'/logos/' + startup?.icon} width={128} height={128} alt={startup?.companyName + "logo"}/>
                                 <div className="flex flex-col">
                                     <span className="text-[30px] font-semibold translate-y-[-7px]">{startup?.companyName}</span>
                                     <span className="translate-y-[-9px]">{startup?.description.split('.')[0] + '.'}</span>
@@ -29,8 +29,9 @@ export default async function StartupPage({params} : IProps) {
                                     </ul>
                                 </div>
                             </div>
+                            <hr className="my-[30px] border-indigo-300"/>
                         </div>
-                        <div className="flex flex-col grow-0 shrink-0 w-[300px]">
+                        <div className="flex flex-col grow-0 shrink-0 w-[300px] pt-[10px]">
                             <div className="flex flex-col w-full bg-gradient-to-b from-[#ffffffaa] to-[#ffffff99] border-1 border-white p-[20px] gap-x-[15px] shadow-lg shadow-indigo-200 rounded-[6px] gap-y-[10px]">
                                 <div className="w-[140px] h-[80px] mx-auto bg-indigo-100 border-1 border-indigo-200"></div>
                                 <span className="text-[22px] font-semibold mt-[10px]">{startup?.companyName}</span>
