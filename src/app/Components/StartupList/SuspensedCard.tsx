@@ -1,6 +1,6 @@
 function SuspensedCard(){
         return(
-            <article className="flex flex-col max-w-[calc(33.33333333%-20px/3)] w-[30%] bg-[#ffffff] shrink grow border-[#E3E3Ec] border-1 p-[20px] rounded-[6px] hover:shadow-xl hover:bg-white cursor-pointer">
+            <article className="flex flex-col max-w-[calc(33.33333333%-20px/3)] w-[30%] bg-gradient-to-b from-[#ffffffbb] to-[#ffffffaa] border-1 border-white shrink grow p-[20px] rounded-[6px] hover:shadow-xl hover:bg-white cursor-pointer">
                 <div className="flex flex-row justify-between w-full">
                     <div className="flex flex-col gap-y-[14px]">
                         <div className="flex flex-row gap-x-[20px] font-light">
