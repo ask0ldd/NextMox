@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import StartupAPIService from "@/app/Services/StartupAPIService"
+import { startupAPIService } from "@/app/Services/StartupAPIService"
 import StartupCard from "./StartupCard"
-import { use } from "react"
 
-function StartupList({query} : {query? : string}){
+async function StartupList({query} : {query? : string}){
 
-    const startups = use((new StartupAPIService()).getAll())
+    // const startups = use((new StartupAPIService()).getAll())
 
     /*const [startups, setStartups] = useState<IStartup[]>([]);
     const [loading, setLoading] = useState(true);
@@ -19,6 +18,10 @@ function StartupList({query} : {query? : string}){
     }, [query])*/
 
     // if(loading) return(<SuspensedList/>)
+
+    const startups = await startupAPIService.getAll()
+
+    if(startups.length == 0 || startups == null) return (<></>)
 
     return(
         <section className="flex flex-col w-full shrink grow items-center bg-gradient-to-t from-indigo-100 to-indigo-50 pb-[40px]">
