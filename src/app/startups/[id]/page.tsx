@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Founder from "@/app/Components/StartupProfile/Founder";
 import Header from "@/app/Components/Header";
 import { startupAPIService } from "@/app/Services/StartupAPIService";
@@ -5,12 +6,29 @@ import Image from "next/image"
 import StartupPill from "@/app/Components/StartupProfile/StartupPill";
 import News from "@/app/Components/StartupProfile/News";
 import Footer from "@/app/Components/Footer";
+import { IStartup } from "@/app/constants/startups";
 
 // params prop is passed by default by next
 export default async function StartupPage({params} : IProps) {
     const id = (await params).id
-  
+
     const startup = await startupAPIService.getById(parseInt(id))
+    
+    if(startup == null) {
+        return (
+        <div className="flex flex-col min-h-screen w-[100%] mx-auto pb-[40px] items-center">
+            <Header/>
+            <main className="flex flex-col row-start-2 items-center w-full justify-center bg-gradient-to-t from-indigo-100 to-indigo-50 pt-[20px]">
+                <div className="flex flex-col w-full max-w-[1440px]">
+                    <section className="flex w-full gap-x-[50px] pt-[20px] pb-[35px] items-center justify-center">
+                        ERROR
+                    </section>
+                </div>
+            </main>
+            <Footer/>
+        </div>
+        )
+    }
 
     return (
         <div className="flex flex-col min-h-screen w-[100%] mx-auto pb-[40px] items-center">
