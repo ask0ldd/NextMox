@@ -1,4 +1,4 @@
-const startups : IStartup[] =
+export const startups : IStartup[] =
 [
   {
     "id" : 1,
@@ -8,7 +8,7 @@ const startups : IStartup[] =
     "pic" : "airbnb3.jpg",
     "ycBatch": "W09",
     "status": "Public",
-    "categories": ["marketplace", "travel"],
+    "categories": ["marketplace", "travel", "consumer", "leisure" , "tourism"],
     "location": "San Francisco, CA, USA",
     "website": "http://airbnb.com",
     "description": "Book accommodations around the world. Founded in August of 2008 and based in San Francisco, California, Airbnb is a trusted community marketplace for people to list, discover, and book unique accommodations around the world — online or from a mobile phone. Whether an apartment for a night, a castle for a week, or a villa for a month, Airbnb connects people to unique travel experiences, at any price point, in more than 33,000 cities and 192 countries. And with world-class customer service and a growing community of users, Airbnb is the easiest way for people to monetize their extra space and showcase it to an audience of millions.",
@@ -67,7 +67,7 @@ const startups : IStartup[] =
     "pic" : "coinbase3.jpg",
     "ycBatch": "S12",
     "status": "Public",
-    "categories": ["crypto-web3"],
+    "categories": ["crypto-web3", "fintech", "banking and exchange"],
     "location": "San Francisco, CA, USA",
     "website": "https://www.coinbase.com",
     "description": "Buy, sell, and manage cryptocurrencies. Founded in June of 2012, Coinbase is a digital currency wallet and platform where merchants and consumers can transact with new digital currencies like bitcoin, ethereum, and litecoin. Our vision is to bring more innovation, efficiency, and equality of opportunity to the world by building an open financial system. Our first step on that journey is making digital currency accessible and approachable for everyone.",
