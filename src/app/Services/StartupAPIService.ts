@@ -8,17 +8,17 @@ export class StartupAPIService {
         this.baseUrl = baseUrl
     }
 
-    async getById(id: number): Promise<IStartup> {
+    async getById(id: number): Promise<IStartup | null> {
         const url = `${this.baseUrl}/startups/${id}`
         return this.fetchWithErrorHandling<IStartup>(url)
     }
 
-    async getAll(): Promise<IStartup[]> {
+    async getAll(): Promise<IStartup[] | null> {
         const url = `${this.baseUrl}/startups`
         return this.fetchWithErrorHandling<IStartup[]>(url)
     }
 
-    private async fetchWithErrorHandling<T>(url: string): Promise<T> {
+    private async fetchWithErrorHandling<T>(url: string): Promise<T | null> {
         try {
             const res = await fetch(url, {
             headers: {
@@ -27,13 +27,13 @@ export class StartupAPIService {
             })
 
             if (!res.ok) {
-            throw new Error(`HTTP Error: ${res.status}`)
+                throw new Error(`HTTP Error: ${res.status}`)
             }
 
             return await res.json() as T
         } catch (error) {
             console.error('API request failed:', error)
-            throw error
+            return null
         }
     }
 }
